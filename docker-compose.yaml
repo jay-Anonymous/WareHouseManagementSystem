@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  db:
+    image: "postgres:14.0-alpine"
+    restart: always
+    environment:
+      POSTGRES_USER: warehouse_user
+      POSTGRES_PASSWORD: warehouse_user_password
+      POSTGRES_DB: warehouse_db
+    ports:
+      - "5432:5432"
